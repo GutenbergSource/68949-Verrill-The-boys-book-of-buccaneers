@@ -41,7 +41,6 @@
 </availability>
 </publicationStmt>
 <notesStmt>
-    <note type=Description>#####<!--A short description of this document.--></note>
     <note type=Credits>Produced by Jeroen Hellingman and the Online Distributed Proofreading Team at https://www.pgdp.net/ for Project Gutenberg.</note>
 </notesStmt>
 <sourceDesc>
@@ -53,8 +52,7 @@
 </sourceDesc>
 </fileDesc>
 <encodingDesc>
-    <p></p>
-    <tagsDecl lang=xx>
+    <tagsDecl lang=zxx>
         <rendition selector=.xs>font-size: x-small;</rendition>
         <rendition selector=.small>font-size: small;</rendition>
         <rendition selector=.large>font-size: large;</rendition>
@@ -64,12 +62,12 @@
 <profileDesc>
     <langUsage>
         <language id=en>English</language>
-        <language id=xx>No linguistic content</language>
+        <language id=zxx>No linguistic content</language>
     </langUsage>
     <textClass>
         <keywords>
             <list>
-                <item>#####</item>
+                <item>Buccaneers -- Juvenile literature</item>
             </list>
         </keywords>
     </textClass>
@@ -141,12 +139,15 @@
 <div1 id=copyright type=Copyright>
 
 
-<p rend=center><hi rend=sc>Copyright, 1923, <lb>By DODD, MEAD AND COMPANY, Inc.</hi>
+<p rend=center><hi rend=sc>Copyright, 1923,
+<lb>By DODD, MEAD AND COMPANY, Inc.</hi>
 
 
-<p rend="center small">PRINTED IN THE U. S. A. BY <lb>The Quinn &amp; Boden Company
+<p rend="center small">PRINTED IN THE U. S. A. BY
+<lb>The Quinn &amp; Boden Company
 
-<p rend="center small">BOOK MANUFACTURERS <lb>RAHWAY      NEW JERSEY
+<p rend="center small">BOOK MANUFACTURERS
+<lb>RAHWAY      NEW JERSEY
 
 
 
@@ -1236,7 +1237,7 @@ Initial cleanup
 [ ] Check all pb-tags, and join lines
 [ ] Move all footnotes in-line
 [ ] Tag headers
-[ ] Fix all [** Proofer comments]
+[X] Fix all [** Proofer comments]
 [ ] Start all paragraphs with the p-tag
 [ ] Change b, sc, g tags to hi tags with correct attributes.
 [ ] Change tb tags to milestone tags.

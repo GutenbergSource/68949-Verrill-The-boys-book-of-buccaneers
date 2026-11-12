@@ -1,6 +1,6 @@
 <!DOCTYPE html
 PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!-- This HTML file has been automatically generated from an XML source on 2022-09-25T20:33:42Z using SAXON HE 9.9.1.8 . -->
+<!-- This HTML file has been automatically generated from an XML source on 2026-11-12T21:02:34Z using SAXON HE 9.9.1.8 . -->
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -8,6 +8,7 @@ PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loos
 <meta name="generator" content="tei2html.xsl, see https://github.com/jhellingman/tei2html">
 <meta name="author" content="Alpheus Hyatt Verrill (1871–1954)">
 <link rel="coverpage" href="images/front.jpg">
+<link rel="icon" href="images/front.jpg" type="image/x-cover">
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
 <meta name="DC.Title" content="The boys’ book of buccaneers">
 <meta name="DC.Creator" content="Alpheus Hyatt Verrill (1871–1954)">
@@ -17,6 +18,9 @@ PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loos
 <meta name="DC.Publisher" content="Project Gutenberg">
 <meta name="DC.Rights" content="This book is not copyrighted in the United States. If you live elsewhere please check the laws of your country before downloading this book.">
 <meta name="DC.Identifier" content="https://www.gutenberg.org/ebooks/68949">
+<meta name="isbn" content="9798238689494">
+<meta name="DC.Identifier" content="urn:isbn:9798238689494">
+<meta name="DC:Subject" content="Buccaneers -- Juvenile literature">
 <style type="text/css"> /* <![CDATA[ */
 html {
 line-height: 1.3;
@@ -44,7 +48,7 @@ background-color: transparent;
 }
 abbr[title] {
 border-bottom: none;
-text-decoration: underline dotted;
+text-decoration: underline;
 }
 b, strong {
 font-weight: bolder;
@@ -143,7 +147,7 @@ text-align: right;
 .alignblock {
 text-align: justify;
 }
-p.tb, hr.tb, .par.tb {
+p.tb, hr.tb, .par.tb, li.tb {
 margin: 1.6em auto;
 text-align: center;
 }
@@ -193,7 +197,7 @@ margin-top: 3.6em;
 span.abbr, abbr {
 white-space: nowrap;
 }
-span.parnum {
+span.parNum {
 font-weight: bold;
 }
 span.corr, span.gap {
@@ -320,7 +324,7 @@ display: block;
 padding: 0;
 }
 .fnarrow {
-color: #AAAAAA;
+color: #660000;
 font-weight: bold;
 text-decoration: none;
 }
@@ -328,7 +332,7 @@ text-decoration: none;
 color: #660000;
 }
 .fnreturn {
-color: #AAAAAA;
+color: #660000;
 font-size: 80%;
 font-weight: bold;
 text-decoration: none;
@@ -343,10 +347,7 @@ background-color: #e9f5ff;
 }
 a.noteRef, a.pseudoNoteRef {
 font-size: 67%;
-line-height: 0;
-position: relative;
-vertical-align: baseline;
-top: -0.5em;
+vertical-align: super;
 text-decoration: none;
 margin-left: 0.1em;
 }
@@ -376,9 +377,9 @@ margin-top: 0.5em;
 p.footnote .fnlabel, .par.footnote .fnlabel {
 float: left;
 margin-left: -0.1em;
-margin-top: 0.9em;
 min-width: 1.0em;
 padding-right: 0.4em;
+height: 1ex;
 }
 .apparatusnote {
 text-decoration: none;
@@ -392,6 +393,10 @@ margin-left: auto;
 margin-right: auto;
 border-width: 0;
 border-collapse: collapse;
+}
+td.tocText {
+padding-top: 2em;
+padding-bottom: 1em;
 }
 td.tocPageNum, td.tocDivNum {
 text-align: right;
@@ -492,6 +497,11 @@ line-height: 0.7em;
 span.musictime span.bottom {
 display: block;
 }
+audio {
+height: 20px;
+margin-left: 0.5em;
+margin-right: 0.5em;
+}
 ul {
 list-style-type: none;
 }
@@ -538,10 +548,17 @@ font-weight: bold;
 }
 .titlePage .docTitle .mainTitle {
 font-size: 1.8em;
+font-weight: inherit;
+font-variant: inherit;
+line-height: inherit;
 }
-.titlePage .docTitle .subTitle, .titlePage .docTitle .seriesTitle,
+.titlePage .docTitle .subTitle,
+.titlePage .docTitle .seriesTitle,
 .titlePage .docTitle .volumeTitle {
 font-size: 1.44em;
+font-weight: inherit;
+font-variant: inherit;
+line-height: inherit;
 }
 .titlePage .byline {
 margin: 2em 0;
@@ -564,10 +581,14 @@ line-height: 1.5;
 font-size: 1.2em;
 font-weight: bold;
 }
-div.figure {
+div.figure, div.figureGroup {
 text-align: center;
 }
-.figure {
+table.figureGroupTable {
+width: 80%;
+border-collapse: collapse;
+}
+.figure, .figureGroup {
 margin-left: auto;
 margin-right: auto;
 }
@@ -594,7 +615,7 @@ float: left;
 .figTopRight, .figBottomRight {
 float: right;
 }
-.figure p, .figure .par {
+.figure p, .figure .par, .figureGroup p, .figureGroup .par {
 font-size: 80%;
 margin-top: 0;
 text-align: center;
@@ -614,8 +635,10 @@ body {
 padding: 1.58em 16%;
 }
 .pageNum {
+font-variant: normal;
+text-transform: none;
 display: inline;
-font-size: 8.4pt;
+font-size: 12.8px;
 font-style: normal;
 margin: 0;
 padding: 0;
@@ -625,7 +648,9 @@ text-align: right;
 letter-spacing: normal;
 }
 .marginnote {
-font-size: 0.8em;
+font-variant: normal;
+text-transform: none;
+font-size: 12.8px;
 height: 0;
 left: 1%;
 position: absolute;
@@ -634,7 +659,9 @@ width: 14%;
 text-align: left;
 }
 .right-marginnote {
-font-size: 0.8em;
+font-variant: normal;
+text-transform: none;
+font-size: 12.8px;
 height: 0;
 right: 3%;
 position: absolute;
@@ -643,7 +670,9 @@ text-align: right;
 width: 11%
 }
 .cut-in-left-note {
-font-size: 0.8em;
+font-variant: normal;
+text-transform: none;
+font-size: 12.8px;
 left: 1%;
 float: left;
 text-indent: 0;
@@ -652,7 +681,9 @@ text-align: left;
 padding: 0.8em 0.8em 0.8em 0;
 }
 .cut-in-right-note {
-font-size: 0.8em;
+font-variant: normal;
+text-transform: none;
+font-size: 12.8px;
 left: 1%;
 float: right;
 text-indent: 0;
@@ -694,6 +725,10 @@ background-color: #FFFFDC;
 .exlink:hover, .wplink:hover, .biblink:hover, .qurlink:hover, .seclin:hover {
 background-color: #FFDCDC;
 }
+abbr[title] {
+border-bottom: none;
+text-decoration: underline dotted;
+}
 body {
 background: #FFFFFF;
 font-family: serif;
@@ -718,7 +753,7 @@ text-align: left;
 color: #660000;
 }
 .rightnote, .pageNum, .lineNum, .pageNum a {
-color: #AAAAAA;
+color: #666666;
 }
 a.hidden:hover, a.noteRef:hover, a.pseudoNoteRef:hover {
 color: red;
@@ -730,14 +765,20 @@ table {
 margin-left: auto;
 margin-right: auto;
 }
-.tableCaption {
+td.tocText {
+text-align: center;
+font-variant: small-caps;
+font-size: 1.2em;
+line-height: 1.5;
+}
+caption, .tableCaption {
 text-align: center;
 }
-.arab { font-family: Scheherazade, serif; }
-.aran { font-family: 'Awami Nastaliq', serif; }
-.grek { font-family: 'Charis SIL', serif; }
-.hebr { font-family: Shlomo, 'Ezra SIL', serif; }
-.syrc { font-family: 'Serto Jerusalem', serif; }
+.Arab { font-family: Scheherazade, serif; }
+.Aran { font-family: 'Awami Nastaliq', serif; }
+.Grek { font-family: 'Charis SIL', serif; }
+.Hebr { font-family: 'SBL Hebrew', Shlomo, 'Ezra SIL', serif; }
+.Syrc { font-family: 'Serto Jerusalem', serif; }
 /* CSS rules generated from rendition elements in TEI file */
 .xs {
 font-size: x-small;
@@ -816,20 +857,20 @@ width:720px;
 </head>
 <body>
 <div class="front">
-<div class="div1 cover"><span class="pageNum">[<a href="#toc">Contents</a>]</span><div class="divBody">
+<div class="div1 cover"><span class="pageNum">[<a title="Go to the table of contents" href="#toc">Contents</a>]</span><div class="divBody">
 <p class="first"></p>
 <div class="figure cover-imagewidth"><img src="images/front.jpg" alt="Original Front Cover." width="485" height="720"></div><p>
 </p>
 </div>
 </div>
-<div class="div1 frontispiece"><span class="pageNum">[<a href="#toc">Contents</a>]</span><div class="divBody">
+<div class="div1 frontispiece"><span class="pageNum">[<a title="Go to the table of contents" href="#toc">Contents</a>]</span><div class="divBody">
 <p class="first"></p>
 <div class="figure frontispiecewidth" id="frontispiece"><img src="images/frontispiece.jpg" alt="At dawn the buccaneers sailed away" width="530" height="720"><p class="figureHead">At dawn the buccaneers sailed away</p>
 </div><p>
 </p>
 </div>
 </div>
-<div class="div1 titlepage"><span class="pageNum">[<a href="#toc">Contents</a>]</span><div class="divBody">
+<div class="div1 titlepage"><span class="pageNum">[<a title="Go to the table of contents" href="#toc">Contents</a>]</span><div class="divBody">
 <p class="first"></p>
 <div class="figure titlepage-imagewidth"><img src="images/titlepage.png" alt="Original Title Page." width="448" height="720"></div><p>
 </p>
@@ -853,37 +894,40 @@ DODD, MEAD AND COMPANY<br>
 <span class="docDate">1923</span></div>
 </div>
 <p></p>
-<div class="div1 copyright"><span class="pageNum">[<a href="#toc">Contents</a>]</span><div class="divBody">
-<p class="first center"><span class="sc">Copyright, 1923, <br>By DODD, MEAD AND COMPANY, Inc.</span>
+<div class="div1 copyright"><span class="pageNum">[<a title="Go to the table of contents" href="#toc">Contents</a>]</span><div class="divBody">
+<p class="first center"><span class="sc">Copyright, 1923,<br>
+By DODD, MEAD AND COMPANY, Inc.</span>
 </p>
-<p class="center small">PRINTED IN THE U.&nbsp;S.&nbsp;A. BY <br>The Quinn &amp; Boden Company
+<p class="center small">PRINTED IN THE U.&nbsp;S.&nbsp;A. BY<br>
+The Quinn &amp; Boden Company
 </p>
-<p class="center small">BOOK MANUFACTURERS <br>RAHWAY NEW JERSEY
+<p class="center small">BOOK MANUFACTURERS<br>
+RAHWAY NEW JERSEY
 <span class="pageNum" id="pb.iii">[<a href="#pb.iii">iii</a>]</span></p>
 </div>
 </div>
-<div id="toc" class="div1 contents"><span class="pageNum">[<a href="#toc">Contents</a>]</span><div class="divHead">
+<div id="toc" class="div1 contents"><span class="pageNum">[<a title="Go to the table of contents" href="#toc">Contents</a>]</span><div class="divHead">
 <h2 class="main">CONTENTS</h2>
 </div>
 <div class="divBody">
 <p class="first"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum xs">PAGE</span>
 </p>
-<p class="tocChapter"><span class="sc">Chapter I</span> <span class="sc"><a href="#ch1" id="xd31e160">Who and What Were the Buccaneers?</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">1</span>
+<p class="tocChapter"><span class="sc">Chapter I</span> <span class="sc"><a href="#ch1" id="xd34e157">Who and What Were the Buccaneers?</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">1</span>
 </p>
 <p class="tocArgument">Pirates and buccaneers. How the buccaneers originated. The first buccaneers. Settlement
 of Tortuga. How the buccaneers received their name. How the first prizes were taken.
 Originators of accident insurance. Pieces of eight and the origin of the dollar. Organization
 of the buccaneers.
 </p>
-<p class="tocChapter"><span class="sc">Chapter II</span> <span class="sc"><a href="#ch2" id="xd31e173">Some Buccaneers and Their Ways</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">14</span>
+<p class="tocChapter"><span class="sc">Chapter II</span> <span class="sc"><a href="#ch2" id="xd34e170">Some Buccaneers and Their Ways</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">14</span>
 </p>
 <p class="tocArgument">Pierre le Grand, the first famous buccaneer. How Le Grand took the admiral’s ship.
-<span class="corr" id="xd31e181" title="Source: Esquemaling">Esquemeling</span> and his chronicles. Bartholomew Portugues and his deeds. A remarkable escape. Rock
+<span class="corr" id="xd34e178" title="Source: Esquemaling">Esquemeling</span> and his chronicles. Bartholomew Portugues and his deeds. A remarkable escape. Rock
 Brasiliano. A brutal buccaneer. Brasiliano’s ruse. Francis L’Ollonois the cruel. The
 most bloodthirsty buccaneer. Cruelties of L’Ollonois. How L’Ollonois took Maracaibo.
 The death of L’Ollonois.
 </p>
-<p class="tocChapter"><span class="sc">Chapter III</span> <span class="sc"><a href="#ch3" id="xd31e189">Morgan and His Road to Fame</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">39</span>
+<p class="tocChapter"><span class="sc">Chapter III</span> <span class="sc"><a href="#ch3" id="xd34e186">Morgan and His Road to Fame</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">39</span>
 </p>
 <p class="tocArgument">Bravery of Spaniards. Attitude of the buccaneers. Early life of Morgan. The truth
 about Morgan. Queer character of Morgan. Treatment of prisoners. Buccaneers and Indians.
@@ -892,27 +936,27 @@ Morgan’s attack on Puerto Príncipe. The buccaneers in Cuba. Morgan prepares t
 Porto Bello. The Gold Road. Capture of Porto Bello. Morgan’s brutality. An exchange
 of pleasantries.
 </p>
-<p class="tocChapter"><span class="sc">Chapter IV</span> <span class="sc"><a href="#ch4" id="xd31e202">The Sacking of Maracaibo</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">64</span>
+<p class="tocChapter"><span class="sc">Chapter IV</span> <span class="sc"><a href="#ch4" id="xd34e199">The Sacking of Maracaibo</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">64</span>
 </p>
 <p class="tocArgument">Morgan gathers a great fleet. Morgan’s treachery. Morgan’s narrow escape from destruction.
 Tortures and butcheries. Morgan is blockaded. The buccaneers defeat the Spanish fleet.
 Morgan’s ruse. The buccaneers escape from Maracaibo.
 <span class="pageNum" id="pb.iv">[<a href="#pb.iv">iv</a>]</span></p>
-<p class="tocChapter"><span class="sc">Chapter V</span> <span class="sc"><a href="#ch5" id="xd31e216">The Taking of San Lorenzo</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">81</span>
+<p class="tocChapter"><span class="sc">Chapter V</span> <span class="sc"><a href="#ch5" id="xd34e213">The Taking of San Lorenzo</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">81</span>
 </p>
 <p class="tocArgument">Morgan’s greatest undertaking. The buccaneers’ greatest fleet. The capture of St.
 Catherine. The governor’s treachery. The buccaneers sail for the Chagres. Attack on
 San Lorenzo. The battle. How accident won the day. Valiant Spaniards. Capture of the
 castle. The buccaneers start for Panama. Hardships of the journey. In sight of Panama.
 </p>
-<p class="tocChapter"><span class="sc">Chapter VI</span> <span class="sc"><a href="#ch6" id="xd31e230">The Sack of Panama</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">100</span>
+<p class="tocChapter"><span class="sc">Chapter VI</span> <span class="sc"><a href="#ch6" id="xd34e227">The Sack of Panama</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">100</span>
 </p>
 <p class="tocArgument">The Jolly Roger. Buccaneers’ standards. How the buccaneers dressed. The battle before
 Old Panama. The buccaneers take the city. Morgan’s fury. Burning of Panama. Looting
 and torturing. Morgan’s vengeance. Morgan demands ransoms. Morgan’s gallantry. The
 return to the coast. Division of booty. Morgan deserts his men.
 </p>
-<p class="tocChapter"><span class="sc">Chapter VII</span> <span class="sc"><a href="#ch7" id="xd31e243">The Misfortunes of Monsieur Ogeron</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">119</span>
+<p class="tocChapter"><span class="sc">Chapter VII</span> <span class="sc"><a href="#ch7" id="xd34e240">The Misfortunes of Monsieur Ogeron</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">119</span>
 </p>
 <p class="tocArgument">The golden altar of San José. Arrest of Morgan. Morgan knighted. The ex-buccaneer
 suppresses piracy. The end of Sir Henry Morgan. Ogeron sails for Curaçao. The buccaneers
@@ -921,7 +965,7 @@ Le Sieur Maintenon and his misfortunes. Odd characters among the buccaneers. The
 poet. A buccaneer naturalist. The divinity student who was a buccaneer. Ringrose the
 navigator.
 </p>
-<p class="tocChapter"><span class="sc">Chapter VIII</span> <span class="sc"><a href="#ch8" id="xd31e256">A Perilous Undertaking</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">133</span>
+<p class="tocChapter"><span class="sc">Chapter VIII</span> <span class="sc"><a href="#ch8" id="xd34e253">A Perilous Undertaking</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">133</span>
 </p>
 <p class="tocArgument">A mad scheme. The plan of Sharp and his fellows. The buccaneers start across Darien.
 A terrible journey. Aid from the Indians. The buccaneers sight El Real de Santa Maria.
@@ -930,7 +974,7 @@ Humanity wins its reward. In sight of the town. The Spanish fleet. A daring atte
 How the buccaneers took the Spanish fleet. Capture of the <i>Santissima Trinidad</i>. Valuable prizes. Dissensions and desertions. Trading with the Dons. Messages from
 the governor. Sawkins remembers an old friend. Loss of Captain Sawkins.
 <span class="pageNum" id="pb.v">[<a href="#pb.v">v</a>]</span></p>
-<p class="tocChapter"><span class="sc">Chapter IX</span> <span class="sc"><a href="#ch9" id="xd31e272">The “Most Dangerous Voyage” of Captain Sharp</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">150</span>
+<p class="tocChapter"><span class="sc">Chapter IX</span> <span class="sc"><a href="#ch9" id="xd34e269">The “Most Dangerous Voyage” of Captain Sharp</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">150</span>
 </p>
 <p class="tocArgument">More desertions. Captain Sharp tells his plans. An amazing program. An awful trip.
 What happened to Wafer. The transformed galleon starts on its cruise. Raids on the
@@ -940,7 +984,7 @@ The buccaneers repulsed. Mutinies and deserters. Sharp refits the <i>Blessed Tri
 Straits of Magellan. Around the Horn through unchartered seas. Up the Atlantic. At
 the journey’s end. The treasure the buccaneers threw away.
 </p>
-<p class="tocChapter"><span class="sc">Chapter X</span> <span class="sc"><a href="#ch10" id="xd31e287">The Last of the Buccaneers</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">174</span>
+<p class="tocChapter"><span class="sc">Chapter X</span> <span class="sc"><a href="#ch10" id="xd34e284">The Last of the Buccaneers</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">174</span>
 </p>
 <p class="tocArgument">The buccaneers in the South Sea. The cruise of the <i>Revenge</i>. The <i>Bachelors’ Delight</i>. Davis and his raids. The cruise of the <i>Cygnet</i>. Reunion of old friends. The buccaneers are disappointed. Swan’s defeat. Ringrose’s
 death. Across the Pacific. The buccaneers in Madagascar. Townley takes vast treasure.
@@ -949,14 +993,14 @@ East Indies. Red Legs. A moral pirate. Red Legs’ chivalry. The penalty of a sc
 wife. Major Stede Bonnet. An unfortunate pirate. End of Bonnet. The pirates in the
 Virgin Islands. Hamlin at St. Thomas.
 </p>
-<p class="tocChapter"><span class="sc">Chapter XI</span> <span class="sc"><a href="#ch11" id="xd31e307">Kidd, the Pirate Who Wasn’t a Pirate</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">192</span>
+<p class="tocChapter"><span class="sc">Chapter XI</span> <span class="sc"><a href="#ch11" id="xd34e304">Kidd, the Pirate Who Wasn’t a Pirate</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">192</span>
 </p>
 <p class="tocArgument">Pirate treasure in fact and fancy. The truth about pirate treasure. Kidd’s unfounded
 fame. The true story of Captain Kidd. Trial of Captain Kidd. Death of Captain Kidd.
 A Don Quixote of the sea. Prince Rupert of the Rhine. A romantic figure. Shipwreck
 of Prince Rupert’s fleet. The death of Prince Rupert.
 </p>
-<p class="tocChapter"><span class="sc">Chapter XII</span> <span class="sc"><a href="#ch12" id="xd31e320">Picturesque Pirates</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">208</span>
+<p class="tocChapter"><span class="sc">Chapter XII</span> <span class="sc"><a href="#ch12" id="xd34e317">Picturesque Pirates</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">208</span>
 </p>
 <p class="tocArgument">The “Man with the glove in his hat.” My Lord, the Earl of Cumberland. The cruise of
 <i>The Scourge of Malice</i>. The Earl’s attack on Puerto Rico. The English <span class="pageNum" id="pb.vi">[<a href="#pb.vi">vi</a>]</span>take San Juan. The unseen foe. A losing battle. The Earl retreats. The most famous
@@ -964,7 +1008,7 @@ real pirate. Blackbeard. A monster in human form. Blackbeard’s courage. Blackb
 ways. Blackbeard’s castle. Origin of Blackbeard. How Blackbeard became a pirate. Blackbeard’s
 appearance. How Blackbeard amused his men. A pirate’s joke. A much-married pirate.
 </p>
-<p class="tocChapter"><span class="sc">Chapter XIII</span> <span class="sc"><a href="#ch13" id="xd31e337">The End of Blackbeard</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">225</span>
+<p class="tocChapter"><span class="sc">Chapter XIII</span> <span class="sc"><a href="#ch13" id="xd34e334">The End of Blackbeard</a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="tocPageNum">225</span>
 </p>
 <p class="tocArgument">Lieutenant Maynard’s attempt. The attack on the pirates. Maynard repulsed. A hand
 to hand battle. The fight. Maynard and Blackbeard fight a duel. A gruesome sight.
@@ -977,100 +1021,100 @@ What we owe the buccaneers.
 <span class="pageNum" id="pb.vii">[<a href="#pb.vii">vii</a>]</span></p>
 </div>
 </div>
-<div class="div1 last-child contents"><span class="pageNum">[<a href="#toc">Contents</a>]</span><div class="divHead">
+<div class="div1 last-child contents"><span class="pageNum">[<a title="Go to the table of contents" href="#toc">Contents</a>]</span><div class="divHead">
 <h2 class="main">ILLUSTRATIONS</h2>
 <table class="tocList">
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#frontispiece">At dawn the buccaneers sailed away.</a> </td>
+<td class="tocDivTitle"><a href="#frontispiece">At dawn the buccaneers sailed away.</a> </td>
 <td class="tocPageNum"><i>Frontispiece</i></td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7">
+<td class="tocDivTitle">
 </td>
 <td class="tocPageNum xs">FACING PAGE</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p016">Money of the buccaneers’ times</a> </td>
+<td class="tocDivTitle"><a href="#p016">Money of the buccaneers’ times</a> </td>
 <td class="tocPageNum">16</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p017">Cruising about in small boats and attacking every Spanish ship they saw</a> </td>
+<td class="tocDivTitle"><a href="#p017">Cruising about in small boats and attacking every Spanish ship they saw</a> </td>
 <td class="tocPageNum">17</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p034">He managed to secure two earthen wine jars and plugged their necks, with the idea
+<td class="tocDivTitle"><a href="#p034">He managed to secure two earthen wine jars and plugged their necks, with the idea
 of using them as floats</a> </td>
 <td class="tocPageNum">34</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p035">The buccaneers swarmed over the ship’s rails</a> </td>
+<td class="tocDivTitle"><a href="#p035">The buccaneers swarmed over the ship’s rails</a> </td>
 <td class="tocPageNum">35</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p076">Sir Henry Morgan, the most famous of the buccaneers, with one of his crew</a> </td>
+<td class="tocDivTitle"><a href="#p076">Sir Henry Morgan, the most famous of the buccaneers, with one of his crew</a> </td>
 <td class="tocPageNum">76</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p077">Burning the galleon</a> </td>
+<td class="tocDivTitle"><a href="#p077">Burning the galleon</a> </td>
 <td class="tocPageNum">77</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p116">The buccaneers’ fleet</a> </td>
+<td class="tocDivTitle"><a href="#p116">The buccaneers’ fleet</a> </td>
 <td class="tocPageNum">116</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p117-1">The ruined tower of the cathedral in Old Panama</a> </td>
+<td class="tocDivTitle"><a href="#p117-1">The ruined tower of the cathedral in Old Panama</a> </td>
 <td class="tocPageNum">117</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p117-2">Near the cathedral are the walls of the ancient fort</a> </td>
+<td class="tocDivTitle"><a href="#p117-2">Near the cathedral are the walls of the ancient fort</a> </td>
 <td class="tocPageNum">117</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p140">Dampier wrote his journal during lulls between battles</a> </td>
+<td class="tocDivTitle"><a href="#p140">Dampier wrote his journal during lulls between battles</a> </td>
 <td class="tocPageNum">140</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p141">Piraguas. It was in boats like these that the earlier buccaneers captured their first
+<td class="tocDivTitle"><a href="#p141">Piraguas. It was in boats like these that the earlier buccaneers captured their first
 Spanish ships</a> </td>
 <td class="tocPageNum">141</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p168">Two ships were promptly fired and sunk</a> </td>
+<td class="tocDivTitle"><a href="#p168">Two ships were promptly fired and sunk</a> </td>
 <td class="tocPageNum">168</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p169">The battered, patched old galleon sailed southward around Cape Horn</a> </td>
+<td class="tocDivTitle"><a href="#p169">The battered, patched old galleon sailed southward around Cape Horn</a> </td>
 <td class="tocPageNum">169</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p188">The merchants bid for the loot brought ashore</a> </td>
+<td class="tocDivTitle"><a href="#p188">The merchants bid for the loot brought ashore</a> </td>
 <td class="tocPageNum">188</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p189">All were in the best of spirits, smoking, drinking, spinning yarns of the sea</a> </td>
+<td class="tocDivTitle"><a href="#p189">All were in the best of spirits, smoking, drinking, spinning yarns of the sea</a> </td>
 <td class="tocPageNum">189</td>
 </tr>
 <tr>
 <td class="tocDivNum"></td>
-<td class="tocDivTitle" colspan="7"><a href="#p244">The last of the pirate ships, the <i>Vigilant</i>, as she was originally rigged. Now a packet in the West Indies</a> </td>
+<td class="tocDivTitle"><a href="#p244">The last of the pirate ships, the <i>Vigilant</i>, as she was originally rigged. Now a packet in the West Indies</a> </td>
 <td class="tocPageNum">244</td>
 </tr>
 </table>
@@ -1079,7 +1123,7 @@ Spanish ships</a> </td>
 </div>
 </div>
 <div class="body">
-<div id="ch1" class="div1 chapter"><span class="pageNum">[<a href="#xd31e160">Contents</a>]</span><div class="divHead">
+<div id="ch1" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e157">Contents</a>]</span><div class="divHead">
 <h2 class="super">THE BOYS’ BOOK OF BUCCANEERS</h2>
 <h2 class="label">CHAPTER I</h2>
 <h2 class="main">WHO AND WHAT WERE THE BUCCANEERS?</h2>
@@ -1157,7 +1201,7 @@ but as they increased, word of their presence reached the authorities, and soldi
 were sent to drive them off or destroy them.
 </p>
 <p>“At that time Hispaniola was teeming with wild cattle, wild hogs, wild horses and
-wild dogs, <span class="corr" id="xd31e502" title="Source: descendents">descendants</span> of the animals introduced by the Spaniards, and the Frenchmen occupied most of their
+wild dogs, <span class="corr" id="xd34e499" title="Source: descendents">descendants</span> of the animals introduced by the Spaniards, and the Frenchmen occupied most of their
 time hunting and killing these creatures. Their hides were valuable, and their meat
 was preserved by drying it over fires or transforming it into a product known to the
 Spaniards as ‘bucan.’ Thus the Frenchmen became known as ‘bucaniers,’ from which the
@@ -1291,7 +1335,7 @@ chiefs.
 <span class="pageNum" id="pb14">[<a href="#pb14">14</a>]</span></p>
 </div>
 </div>
-<div id="ch2" class="div1 chapter"><span class="pageNum">[<a href="#xd31e173">Contents</a>]</span><div class="divHead">
+<div id="ch2" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e170">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER II</h2>
 <h2 class="main">SOME BUCCANEERS AND THEIR WAYS</h2>
 </div>
@@ -1339,7 +1383,7 @@ with Le Grand at their head, dashed into the cabin where the unsuspecting Vice A
 was enjoying a quiet game of cards with his officers.
 </p>
 <p>“As Le Grand leaped across the room and placed his pistol at the Admiral’s breast
-the <span class="corr" id="xd31e563" title="Source: dumfounded">dumbfounded</span> <span class="pageNum" id="pb17">[<a href="#pb17">17</a>]</span>Spaniard exclaimed, ‘Lord bless us! Are these devils or what?’
+the <span class="corr" id="xd34e560" title="Source: dumfounded">dumbfounded</span> <span class="pageNum" id="pb17">[<a href="#pb17">17</a>]</span>Spaniard exclaimed, ‘Lord bless us! Are these devils or what?’
 </p>
 <div class="figure p016width" id="p016"><img src="images/p016.jpg" alt="Money of the buccaneers’ times" width="510" height="720"><p class="figureHead"><span class="sc">Money of the buccaneers’ times</span></p>
 <p class="first"></p>
@@ -1686,11 +1730,11 @@ to retreat with heavy loss and, still hoping to retrieve his fortunes, headed so
 for the coasts of Darien. And here the villain met with the end he so richly deserved.
 He was taken by the savage Indians of the district, was torn to pieces while alive
 and his limbs cast into a fire. Finally, that no trace or memory of him might remain,
-the savages scattered his ashes in the air.<span class="corr" id="xd31e687" title="Not in source">”</span>
+the savages scattered his ashes in the air.<span id="xd34e684">”</span>
 <span class="pageNum" id="pb39">[<a href="#pb39">39</a>]</span></p>
 </div>
 </div>
-<div id="ch3" class="div1 chapter"><span class="pageNum">[<a href="#xd31e189">Contents</a>]</span><div class="divHead">
+<div id="ch3" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e186">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER III</h2>
 <h2 class="main">MORGAN AND HIS ROAD TO FAME</h2>
 </div>
@@ -2076,7 +2120,7 @@ buccaneer of them all.”
 <span class="pageNum" id="pb64">[<a href="#pb64">64</a>]</span></p>
 </div>
 </div>
-<div id="ch4" class="div1 chapter"><span class="pageNum">[<a href="#xd31e202">Contents</a>]</span><div class="divHead">
+<div id="ch4" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e199">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER IV</h2>
 <h2 class="main">THE SACKING OF MARACAIBO</h2>
 </div>
@@ -2339,7 +2383,7 @@ headed for Jamaica.”
 <span class="pageNum" id="pb81">[<a href="#pb81">81</a>]</span></p>
 </div>
 </div>
-<div id="ch5" class="div1 chapter"><span class="pageNum">[<a href="#xd31e216">Contents</a>]</span><div class="divHead">
+<div id="ch5" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e213">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER V</h2>
 <h2 class="main">THE TAKING OF SAN LORENZO</h2>
 </div>
@@ -2633,7 +2677,7 @@ the roaring of the flames.”
 <span class="pageNum" id="pb100">[<a href="#pb100">100</a>]</span></p>
 </div>
 </div>
-<div id="ch6" class="div1 chapter"><span class="pageNum">[<a href="#xd31e230">Contents</a>]</span><div class="divHead">
+<div id="ch6" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e227">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER VI</h2>
 <h2 class="main">THE SACK OF PANAMA</h2>
 </div>
@@ -2935,7 +2979,7 @@ testify to the most wanton, ruthless deed ever perpetrated by a buccaneer.”
 <span class="pageNum" id="pb119">[<a href="#pb119">119</a>]</span></p>
 </div>
 </div>
-<div id="ch7" class="div1 chapter"><span class="pageNum">[<a href="#xd31e243">Contents</a>]</span><div class="divHead">
+<div id="ch7" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e240">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER VII</h2>
 <h2 class="main">THE MISFORTUNES OF MONSIEUR OGERON</h2>
 </div>
@@ -3135,7 +3179,7 @@ my Journal and other writings from being wet, tho’ I was often forced to swim.
 </p>
 <p>“And along with the author-naturalist, Dampier, was many another odd character. There
 was Foster, who spent his hours between battles <span class="pageNum" id="pb132">[<a href="#pb132">132</a>]</span>composing sentimental poetry and who wrote ‘Soneyettes of Love’ aboard a buccaneer
-ship<span id="xd31e1109"></span>; Richard Jobson, a divinity student and chemist, who carried along with his sword
+ship<span id="xd34e1106"></span>; Richard Jobson, a divinity student and chemist, who carried along with his sword
 and pistols a well-thumbed Greek Testament which he translated aloud for the edification
 of his piratical mates, and, lastly, Ringrose, the pilot and navigator, whose carefully
 kept log has given us the true history of this ‘most dangerous voyage and bold assaults
@@ -3143,7 +3187,7 @@ of Captain Bartholomew Sharp.’ ”
 <span class="pageNum" id="pb133">[<a href="#pb133">133</a>]</span></p>
 </div>
 </div>
-<div id="ch8" class="div1 chapter"><span class="pageNum">[<a href="#xd31e256">Contents</a>]</span><div class="divHead">
+<div id="ch8" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e253">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER VIII</h2>
 <h2 class="main">A PERILOUS UNDERTAKING</h2>
 </div>
@@ -3191,7 +3235,7 @@ strong, and, leaving a few men and Captains Alleston and Macket to guard the shi
 the dauntless buccaneers started on their terrible march, carrying for provisions
 but three cakes of cassava each and all heavily armed.
 <span class="pageNum" id="pb136">[<a href="#pb136">136</a>]</span></p>
-<p><span class="corr" id="xd31e1129" title="Not in source">“</span>Following their Indian guides, the buccaneers divided into six companies and entered
+<p><span id="xd34e1126">“</span>Following their Indian guides, the buccaneers divided into six companies and entered
 the jungle. The very first day their hardships began. So impenetrable was the forest
 that it was necessary to hew a way every yard, there were rivers to cross, swamps
 to wade through, and clouds of mosquitoes made life miserable. The first day four
@@ -3404,7 +3448,7 @@ beaten off.
 <span class="pageNum" id="pb150">[<a href="#pb150">150</a>]</span></p>
 </div>
 </div>
-<div id="ch9" class="div1 chapter"><span class="pageNum">[<a href="#xd31e272">Contents</a>]</span><div class="divHead">
+<div id="ch9" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e269">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER IX</h2>
 <h2 class="main">THE “MOST DANGEROUS VOYAGE” OF CAPTAIN SHARP</h2>
 </div>
@@ -3776,7 +3820,7 @@ the sea, as worthless, more riches than they had won on their entire venture!”
 <span class="pageNum" id="pb174">[<a href="#pb174">174</a>]</span></p>
 </div>
 </div>
-<div id="ch10" class="div1 chapter"><span class="pageNum">[<a href="#xd31e287">Contents</a>]</span><div class="divHead">
+<div id="ch10" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e284">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER X</h2>
 <h2 class="main">THE LAST OF THE BUCCANEERS</h2>
 </div>
@@ -4063,7 +4107,7 @@ better adapted to piratical uses.”
 <span class="pageNum" id="pb192">[<a href="#pb192">192</a>]</span></p>
 </div>
 </div>
-<div id="ch11" class="div1 chapter"><span class="pageNum">[<a href="#xd31e307">Contents</a>]</span><div class="divHead">
+<div id="ch11" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e304">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER XI</h2>
 <h2 class="main">KIDD, THE PIRATE WHO WASN’T A PIRATE</h2>
 </div>
@@ -4071,7 +4115,7 @@ better adapted to piratical uses.”
 <p class="first">“Whew, I didn’t know they had pirates and buccaneers right up here around home!” exclaimed
 Fred. “Think of pirates in Long Island Sound!”
 </p>
-<p>“Of course there were,” declared Jack. “If there weren’t, how do you <span class="corr" id="xd31e1499" title="Source: supose">suppose</span> Captain Kidd could have buried his treasure up here?”
+<p>“Of course there were,” declared Jack. “If there weren’t, how do you <span class="corr" id="xd34e1496" title="Source: supose">suppose</span> Captain Kidd could have buried his treasure up here?”
 </p>
 <p>“That’s so,” admitted his cousin. “But I always thought he pirated down in the West
 Indies and just brought his treasure up here to hide it. Do you suppose he really
@@ -4313,7 +4357,7 @@ he died, almost unknown, in his English home.”
 <span class="pageNum" id="pb208">[<a href="#pb208">208</a>]</span></p>
 </div>
 </div>
-<div id="ch12" class="div1 chapter"><span class="pageNum">[<a href="#xd31e320">Contents</a>]</span><div class="divHead">
+<div id="ch12" class="div1 chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e317">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER XII</h2>
 <h2 class="main">PICTURESQUE PIRATES</h2>
 </div>
@@ -4356,7 +4400,7 @@ life. Again and again he returned to England to settle down, but ever the life o
 the sea rover appealed too strongly to him, and donning his hat with its jeweled glove,
 he would up and away to some new daredevil adventure.
 </p>
-<p><span class="corr" id="xd31e1647" title="Not in source">“</span>Finally, in March, 1598, he set sail from Plymouth harbor with twenty ships, all his
+<p><span id="xd34e1644">“</span>Finally, in March, 1598, he set sail from Plymouth harbor with twenty ships, all his
 own, for the greatest attack on the Dons in the Caribbean that had ever been organized.
 His flagship bore the curious name of <i>The Scourge of Malice</i>, and the Earl’s bold scheme was to attack the supposedly impregnable port of San
 Juan, Puerto Rico. Drake and Hawkins had tried it, but had been driven off, and the
@@ -4377,7 +4421,7 @@ it was too late. The English were in the streets, and although the Dons fought m
 and many fell on both sides, the Earl’s men were victorious, and within two hours
 the city was in their hands.
 </p>
-<p><span class="corr" id="xd31e1657" title="Not in source">“</span>And mightily well pleased was My Lord as, with his own men in charge of the walls
+<p><span id="xd34e1654">“</span>And mightily well pleased was My Lord as, with his own men in charge of the walls
 and grim old fortress, he strutted about the city appraising the valuables, the rich
 merchandise, the ships in the harbor, which were his to pick and choose from. Never
 before had San Juan fallen to an enemy, and the Earl had every reason to be filled
@@ -4514,7 +4558,7 @@ a little hell of our own and see who is best fitted for our hereafter.’ It was
 for the men to protest, for any artificial inferno that Teach could devise would,
 they knew, be mild in comparison to that which they would bring upon <span class="pageNum" id="pb220">[<a href="#pb220">220</a>]</span>themselves should they refuse to follow out their captain’s wishes.
 </p>
-<p><span class="corr" id="xd31e1699" title="Not in source">“</span>Urging the fellows into the hold by no gentle means, Teach leaped in with them, and
+<p><span id="xd34e1696">“</span>Urging the fellows into the hold by no gentle means, Teach leaped in with them, and
 then, setting fire to several pots of brimstone, pitch and other inflammable things,
 the pirate chief drew the hatches shut. There in the close, unventilated hold they
 sat upon the ballast, choking, coughing, suffocating in the noxious fumes until, half-roasted,
@@ -4524,7 +4568,7 @@ open air did Blackbeard emerge triumphant, and throughout his life he was never 
 of boasting of his endurance, and took the greatest pride in recalling that his men
 declared that, when he came forth, he had looked like a half-hanged man.
 </p>
-<p><span class="corr" id="xd31e1702" title="Not in source">“</span>In fact, this remark by a thoughtless member of his crew set Teach to thinking and,
+<p><span id="xd34e1699">“</span>In fact, this remark by a thoughtless member of his crew set Teach to thinking and,
 his curiosity being aroused, he suggested that another and even more interesting test
 should be made to see who could come the nearest to being hung without dying. But
 at this his men drew the line; they had no desire to choke and kick while dangling
@@ -4586,7 +4630,7 @@ days before Teach had gone a-pirating.”
 <span class="pageNum" id="pb225">[<a href="#pb225">225</a>]</span></p>
 </div>
 </div>
-<div id="ch13" class="div1 last-child chapter"><span class="pageNum">[<a href="#xd31e337">Contents</a>]</span><div class="divHead">
+<div id="ch13" class="div1 last-child chapter"><span class="pageNum">[<a title="Go to the table of contents" href="#xd34e334">Contents</a>]</span><div class="divHead">
 <h2 class="label">CHAPTER XIII</h2>
 <h2 class="main">THE END OF BLACKBEARD</h2>
 </div>
@@ -4616,7 +4660,7 @@ with anchors, fittings, water casks and spare spars, Maynard lightened his sloop
 she could pass over the flats, and then, hoisting sail, he bore down upon the stranded
 pirate craft.
 </p>
-<p><span class="corr" id="xd31e1734" title="Not in source">“</span>Blackbeard, with lighted fuses glowing in his hair and beard, drawn cutlass and pistols
+<p><span id="xd34e1731">“</span>Blackbeard, with lighted fuses glowing in his hair and beard, drawn cutlass and pistols
 in hand, leaped upon the rail, ‘hailed him in a rude manner and cursed most horribly,’
 as the old accounts tell <span class="pageNum" id="pb227">[<a href="#pb227">227</a>]</span>us, and then, in a bit of bravado, raised a glass of grog and in full view of his
 enemies drank to ‘the damnation of the attackers.’
@@ -4975,9 +5019,9 @@ as when the Jolly Roger flew from many a masthead.”
 <h3 class="main">Availability</h3>
 <p class="first">This eBook is for the use of anyone anywhere at no cost and with almost no restrictions
 whatsoever. You may copy it, give it away or re-use it under the terms of the Project
-Gutenberg License included with this eBook or online at <a class="seclink xd31e45" title="External link" href="https://www.gutenberg.org/">www.gutenberg.org</a>.
+Gutenberg License included with this eBook or online at <a class="seclink xd34e45" title="External link" href="https://www.gutenberg.org/">www.gutenberg.org</a>.
 </p>
-<p>This eBook is produced by the Online Distributed Proofreading Team at <a class="seclink xd31e45" title="External link" href="https://www.pgdp.net/">www.pgdp.net</a>.
+<p>This eBook is produced by the Online Distributed Proofreading Team at <a class="seclink xd34e45" title="External link" href="https://www.pgdp.net/">www.pgdp.net</a>.
 </p>
 <h3 class="main">Metadata</h3>
 <table class="colophonMetadata" summary="Metadata">
@@ -4998,7 +5042,7 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 </tr>
 <tr>
 <td><b>File generation date:</b></td>
-<td>2022-09-25 20:33:42 UTC</td>
+<td>2026-11-12 21:02:34 UTC</td>
 <td></td>
 </tr>
 <tr>
@@ -5009,6 +5053,11 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 <tr>
 <td><b>Original publication date:</b></td>
 <td>1923</td>
+<td></td>
+</tr>
+<tr>
+<td><b>Keywords:</b></td>
+<td>Buccaneers -- Juvenile literature</td>
 <td></td>
 </tr>
 <tr>
@@ -5025,6 +5074,11 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 <td><b>QR-code:</b></td>
 <td colspan="2"><img src="images/qr68949.png" alt="QR-code of Project Gutenberg URL" width="148" height="148"></td>
 </tr>
+<tr>
+<td><b>ISBN:</b></td>
+<td>979-8-238-68949-4</td>
+<td></td>
+</tr>
 </table>
 <h3 class="main">Revision History</h3>
 <ul>
@@ -5032,7 +5086,7 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 </li>
 </ul>
 <h3 class="main">Corrections</h3>
-<p>The following corrections have been applied to the text:</p>
+<p>The following 12 corrections have been applied to the text:</p>
 <table class="correctionTable" summary="Overview of corrections applied to the text.">
 <tr>
 <th>Page</th>
@@ -5041,25 +5095,25 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 <th>Edit distance</th>
 </tr>
 <tr>
-<td class="width20"><a class="pageref" href="#xd31e181">iii</a></td>
+<td class="width20"><a class="pageref" href="#xd34e178">iii</a></td>
 <td class="width40 bottom" lang="en">Esquemaling</td>
 <td class="width40 bottom" lang="en">Esquemeling</td>
 <td class="bottom">1</td>
 </tr>
 <tr>
-<td class="width20"><a class="pageref" href="#xd31e502">5</a></td>
+<td class="width20"><a class="pageref" href="#xd34e499">5</a></td>
 <td class="width40 bottom" lang="en">descendents</td>
 <td class="width40 bottom" lang="en">descendants</td>
 <td class="bottom">1</td>
 </tr>
 <tr>
-<td class="width20"><a class="pageref" href="#xd31e563">16</a></td>
+<td class="width20"><a class="pageref" href="#xd34e560">16</a></td>
 <td class="width40 bottom" lang="en">dumfounded</td>
 <td class="width40 bottom" lang="en">dumbfounded</td>
 <td class="bottom">1</td>
 </tr>
 <tr>
-<td class="width20"><a class="pageref" href="#xd31e687">38</a></td>
+<td class="width20"><a class="pageref" href="#xd34e684">38</a></td>
 <td class="width40 bottom" lang="en">
 [<i>Not in source</i>]
 </td>
@@ -5067,7 +5121,7 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 <td class="bottom">1</td>
 </tr>
 <tr>
-<td class="width20"><a class="pageref" href="#xd31e1109">132</a></td>
+<td class="width20"><a class="pageref" href="#xd34e1106">132</a></td>
 <td class="width40 bottom" lang="en">’</td>
 <td class="width40 bottom" lang="en">
 [<i>Deleted</i>]
@@ -5075,7 +5129,7 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 <td class="bottom">1</td>
 </tr>
 <tr>
-<td class="width20"><a class="pageref" href="#xd31e1129">136</a>, <a class="pageref" href="#xd31e1647">210</a>, <a class="pageref" href="#xd31e1657">211</a>, <a class="pageref" href="#xd31e1699">220</a>, <a class="pageref" href="#xd31e1702">220</a>, <a class="pageref" href="#xd31e1734">226</a></td>
+<td class="width20"><a class="pageref" href="#xd34e1126">136</a>, <a class="pageref" href="#xd34e1644">210</a>, <a class="pageref" href="#xd34e1654">211</a>, <a class="pageref" href="#xd34e1696">220</a>, <a class="pageref" href="#xd34e1699">220</a>, <a class="pageref" href="#xd34e1731">226</a></td>
 <td class="width40 bottom" lang="en">
 [<i>Not in source</i>]
 </td>
@@ -5083,7 +5137,7 @@ Gutenberg License included with this eBook or online at <a class="seclink xd31e4
 <td class="bottom">1</td>
 </tr>
 <tr>
-<td class="width20"><a class="pageref" href="#xd31e1499">192</a></td>
+<td class="width20"><a class="pageref" href="#xd34e1496">192</a></td>
 <td class="width40 bottom" lang="en">supose</td>
 <td class="width40 bottom" lang="en">suppose</td>
 <td class="bottom">1</td>
